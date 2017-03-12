@@ -1,0 +1,87 @@
+'atom-text-editor:not(.envy-mode)':
+  'alt-j': 'envy:toggle'
+
+# Default Envy mode keymap (QWERTY layout)
+'atom-text-editor.envy-mode':
+  'p': 'envy:toggle'
+
+  # Selections
+  'q': 'envy:remove-every-second-selection-even'
+  'Q': 'envy:remove-every-second-selection-odd'
+
+  'a': 'editor:consolidate-selections'
+  'A': 'envy:split-selections-into-cursors'
+
+  'z': 'envy:invert-selections-in-lines'
+  'Z': 'envy:invert-selections'
+
+  'w': 'envy:select-surrounding-brackets'
+  'W': 'envy:select-all-brackets'
+  'e': 'envy:move-bracket-selection-backward'
+  'E': 'envy:add-bracket-selection-backward'
+  'r': 'envy:move-bracket-selection-forward'
+  'R': 'envy:add-bracket-selection-forward'
+
+  's': 'envy:select-surrounding-block'
+  'S': 'envy:select-all-blocks'
+  'd': 'envy:move-block-selection-backward'
+  'D': 'envy:add-block-selection-backward'
+  'alt-d': 'envy:move-block-selection-backward-alternative'
+  'alt-D': 'envy:add-block-selection-backward-alternative'
+  'f': 'envy:move-block-selection-forward'
+  'F': 'envy:add-block-selection-forward'
+  'alt-f': 'envy:move-block-selection-forward-alternative'
+  'alt-F': 'envy:add-block-selection-forward-alternative'
+
+  'x': 'envy:select-all-matches-in-lines'
+  'X': 'envy:select-all-matches'
+  'c': 'envy:select-previous-match'
+  'C': 'envy:add-select-previous-match'
+  'v': 'envy:select-next-match'
+  'V': 'envy:add-select-next-match'
+
+  # Clipboard
+  't': 'core:copy'
+  'T': 'envy:copy-to-secondary-clipboard'
+  'g': 'core:paste'
+  'G': 'envy:paste-from-secondary-clipboard'
+  'b': 'core:cut'
+  'B': 'envy:cut-to-secondary-clipboard'
+
+  # Text manipulation
+  'n': 'envy:swap-selections'
+  'N': 'envy:swap-selections-alternative'
+  'alt-n': 'envy:rotate-selections-forward'
+  'alt-N': 'envy:rotate-selections-backward'
+  'm': 'envy:left-align-selections'
+  'M': 'envy:right-align-selections'
+
+  # Movement
+  'y': 'editor:move-to-beginning-of-previous-paragraph'
+  'Y': 'editor:select-to-beginning-of-previous-paragraph'
+  'alt-y': 'core:page-up'
+  'alt-Y': 'core:select-page-up'
+  'h': 'editor:move-to-beginning-of-next-paragraph'
+  'H': 'editor:select-to-beginning-of-next-paragraph'
+  'alt-h': 'core:page-down'
+  'alt-H': 'core:select-page-down'
+
+  'j': 'core:move-left'
+  'J': 'core:select-left'
+  'alt-j': 'editor:move-to-previous-subword-boundary'
+  'alt-J': 'editor:select-to-previous-subword-boundary'
+  'k': 'core:move-down'
+  'K': 'core:select-down'
+  'alt-k': 'editor:add-selection-below'
+  'l': 'core:move-right'
+  'L': 'core:select-right'
+  'alt-l': 'editor:move-to-next-subword-boundary'
+  'alt-L': 'editor:select-to-next-subword-boundary'
+  'i': 'core:move-up'
+  'I': 'core:select-up'
+  'alt-i': 'editor:add-selection-above'
+
+  'u': 'editor:move-to-beginning-of-line'
+  'U': 'editor:select-to-beginning-of-line'
+  'o': 'editor:move-to-end-of-line'
+  'O': 'editor:select-to-end-of-line'

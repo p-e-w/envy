@@ -1,0 +1,35 @@
+/*
+ * Envy - Text editing supercharger
+ *
+ * Copyright (c) 2017 Philipp Emanuel Weidmann <pew@worldwidemann.com>
+ *
+ * Nemo vir est qui mundum non reddat meliorem.
+ *
+ * Released under the terms of the MIT License
+ * (https://opensource.org/licenses/MIT)
+ */
+
+@import 'syntax-variables';
+
+@background: darken(@syntax-background-color, 5%);
+@cursor: contrast(@background, orange, yellow);
+
+atom-text-editor.envy-mode {
+  background-color: @background !important;
+
+  .selection .region {
+    background-color: @cursor !important;
+  }
+
+  .cursor {
+    border-left: 3px solid @cursor !important;
+  }
+
+  .cursors.blink-off .cursor {
+    opacity: 1 !important;
+  }
+
+  .line.cursor-line {
+    background-color: transparent !important;
+  }
+}
