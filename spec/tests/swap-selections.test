@@ -1,0 +1,36 @@
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|><|s|> tuvwx<||> <|yz.
+123 456|>789<|0|>
+---
+swaps the texts of each pair of selections (1 <-> 2, 3 <-> 4 etc.)
+---
+envy:swap-selections
+---
+<|efg|> <|abcd|> hi<|s|><|jkl mnop
+qr|> tuvwx<|yz.
+123 456|> <||>789<|0|>
+---
+restores the original text when swapping twice
+---
+envy:swap-selections
+---
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|><|s|> tuvwx<||> <|yz.
+123 456|>789<|0|>
+---
+swaps the texts of each pair of selections (1 <-> 3, 2 <-> 4 etc.)
+---
+envy:swap-selections-alternative
+---
+<|jkl mnop
+qr|> <|s|> hi<|abcd|><|efg|> tuvwx<|0|> <|yz.
+123 456|>789<||>
+---
+restores the original text when swapping twice
+---
+envy:swap-selections-alternative
+---
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|><|s|> tuvwx<||> <|yz.
+123 456|>789<|0|>
+---

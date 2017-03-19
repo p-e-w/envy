@@ -1,0 +1,56 @@
+abcd efg hijkl mnop
+qrs tu<|vwx yz.
+123 |>4567890
+<||>
+abcd efg <||>hijkl mnop
+<|qrs tuvwx yz.
+|>123 4567890
+---
+inverts each selection inside the lines it contains
+---
+envy:invert-selections-in-lines
+---
+abcd efg hijkl mnop
+<|qrs tu|>vwx yz.
+123 <|4567890|>
+<||>
+<|abcd efg |><|hijkl mnop|>
+<|qrs tuvwx yz.
+|>123 4567890
+---
+(mostly) restores the original selections when inverting twice
+---
+envy:invert-selections-in-lines
+---
+abcd efg hijkl mnop
+qrs tu<|vwx yz.|>
+<|123 |>4567890
+<||>
+abcd efg <||>hijkl mnop
+<|qrs tuvwx yz.
+|>123 4567890
+---
+inverts all selections
+---
+envy:invert-selections
+---
+<|abcd efg hijkl mnop
+qrs tu|>vwx yz.<|
+|>123 <|4567890
+|><|
+abcd efg |><|hijkl mnop
+|>qrs tuvwx yz.
+<|123 4567890|>
+---
+restores the original selections when inverting twice
+---
+envy:invert-selections
+---
+abcd efg hijkl mnop
+qrs tu<|vwx yz.|>
+<|123 |>4567890
+<||>
+abcd efg <||>hijkl mnop
+<|qrs tuvwx yz.
+|>123 4567890
+---

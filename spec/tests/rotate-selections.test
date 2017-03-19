@@ -1,0 +1,44 @@
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|> <|s|> tuvwx<||> <|yz.
+123 456|>7890
+---
+cyclically replaces the text of each selection with that of the preceding one
+---
+envy:rotate-selections-forward
+---
+<|yz.
+123 456|> <|abcd|> hi<|efg|> <|jkl mnop
+qr|> tuvwx<|s|> <||>7890
+---
+restores the original text when repeating the process often enough
+---
+envy:rotate-selections-forward
+envy:rotate-selections-forward
+envy:rotate-selections-forward
+envy:rotate-selections-forward
+envy:rotate-selections-forward
+---
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|> <|s|> tuvwx<||> <|yz.
+123 456|>7890
+---
+cyclically replaces the text of each selection with that of the following one
+---
+envy:rotate-selections-backward
+---
+<|efg|> <|jkl mnop
+qr|> hi<|s|> <||> tuvwx<|yz.
+123 456|> <|abcd|>7890
+---
+restores the original text when repeating the process often enough
+---
+envy:rotate-selections-backward
+envy:rotate-selections-backward
+envy:rotate-selections-backward
+envy:rotate-selections-backward
+envy:rotate-selections-backward
+---
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|> <|s|> tuvwx<||> <|yz.
+123 456|>7890
+---

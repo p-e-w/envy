@@ -1,0 +1,12 @@
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|><|s|> tuvwx<||> <|yz.
+123 456|>7890
+---
+splits each selection into two cursors
+---
+envy:split-selections-into-cursors
+---
+<||>abcd<||> <||>efg<||> hi<||>jkl mnop
+qr<||>s<||> tuvwx<||> <||>yz.
+123 456<||>7890
+---

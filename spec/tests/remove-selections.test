@@ -1,0 +1,20 @@
+<|abcd|> <|efg|> hi<|jkl mnop
+qr|><|s|> tuvwx<||> <|yz.
+123 456|>7890
+---
+removes all even-indexed selections
+---
+envy:remove-every-second-selection-even
+---
+<|abcd|> efg hi<|jkl mnop
+qr|>s tuvwx<||> yz.
+123 4567890
+---
+removes all odd-indexed selections
+---
+envy:remove-every-second-selection-odd
+---
+abcd efg hi<|jkl mnop
+qr|>s tuvwx yz.
+123 4567890
+---
