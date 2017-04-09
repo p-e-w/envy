@@ -1,0 +1,68 @@
+/* Comment */
+class A {
+  b(c) {
+    d = "<||>abcdefg";
+    e = [1, <|2, 3|>, 4, 5];
+  }
+}
+---
+moves each selection to the previous bracket pair
+---
+envy:move-bracket-selection-backward
+---
+/* Comment */
+class A {
+  b<|(c)|> {
+    d = <|"abcdefg"|>;
+    e = [1, 2, 3, 4, 5];
+  }
+}
+---
+moves each selection to the next bracket pair
+---
+envy:move-bracket-selection-forward
+---
+/* Comment */
+class A {
+  b(c) <|{
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }|>
+}
+---
+moves each selection to the previous bracket pair
+---
+envy:move-bracket-selection-backward
+---
+/* Comment */
+class A {
+  b<|(c)|> {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+}
+---
+adds the next bracket pair to each selection
+---
+envy:add-bracket-selection-forward
+---
+/* Comment */
+class A {
+  b<|(c)|> <|{
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }|>
+}
+---
+adds the previous bracket pair to each selection
+---
+envy:add-bracket-selection-backward
+---
+<|/* Comment */|>
+class A {
+  b<|(c)|> <|{
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }|>
+}
+---

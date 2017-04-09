@@ -1,0 +1,139 @@
+/* <||>Comment<| |><|*/|>
+class A {
+<|
+|><|  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }|>
+
+}
+---
+moves each selection to the next block of the same type as the selection
+---
+envy:move-block-selection-forward
+---
+/* Comment */<|
+|><|class|> A <|{|>
+
+<|  b(c) {
+|>    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+<|}|>
+---
+moves each selection to the previous block of the same type as the selection
+---
+envy:move-block-selection-backward
+---
+/* <|Comment|><| |><|*/|>
+class A {
+<|
+|>  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+<|
+|>}
+---
+moves each selection to the next block of the same type as the selection, ignoring token type
+---
+envy:move-block-selection-forward-alternative
+---
+/* Comment<| |><|*/|><|
+|>class A {
+
+<|  b(c) {
+|>    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+<|}|>
+---
+moves each selection to the previous block of the same type as the selection, ignoring token type
+---
+envy:move-block-selection-backward-alternative
+---
+/* <|Comment|><| |><|*/|>
+class A {
+<|
+|>  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+<|
+|>}
+---
+adds the next block of the same type as the selection to each selection
+---
+envy:add-block-selection-forward
+---
+/* <|Comment|><| |><|*/|><|
+|><|class|> A <|{|>
+<|
+|><|  b(c) {
+|>    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+<|
+|><|}|>
+---
+adds the previous block of the same type as the selection to each selection
+---
+envy:add-block-selection-backward
+---
+<|/*|><| |><|Comment|><| |><|*/|><|
+|><|class A {
+|><|
+|><|  b(c) {
+|>    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+<|  }
+|><|
+|><|}|>
+---
+prepares the selections for the next test
+---
+editor:consolidate-selections
+envy:move-block-selection-forward-alternative
+envy:move-block-selection-forward-alternative
+envy:add-block-selection-forward
+---
+/* <|Comment|> */
+<|class|> A {
+
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+}
+---
+adds the next block of the same type as the selection to each selection, ignoring token type
+---
+envy:add-block-selection-forward-alternative
+---
+/* <|Comment|><| |>*/
+<|class|><| |>A {
+
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+}
+---
+adds the previous block of the same type as the selection to each selection, ignoring token type
+---
+envy:add-block-selection-backward-alternative
+---
+/*<| |><|Comment|><| |>*/<|
+|><|class|><| |>A {
+
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+}
+---

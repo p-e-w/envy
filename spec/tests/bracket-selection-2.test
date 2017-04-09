@@ -1,0 +1,20 @@
+/* Comment */
+class A {
+  b<|(c)|> {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+}
+---
+selects all bracket pairs
+---
+envy:select-all-brackets
+---
+<|/* Comment */|>
+class A {
+  b<|(c)|> <|{
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }|>
+}
+---

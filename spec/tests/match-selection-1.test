@@ -1,0 +1,23 @@
+<|a|>bc <|def|> abc abc
+ghi def ghi GHI jkl
+abcdefghijklmnopqrstuvwxyz<|
+abcdefghijklmnopqrstuvwxyz|>
+---
+selects all occurrences of each selected text in the same line as the selection
+---
+envy:select-all-matches-in-lines
+---
+<|a|>bc <|def|> <|a|>bc <|a|>bc
+ghi def ghi GHI jkl
+abcdefghijklmnopqrstuvwxyz<|
+abcdefghijklmnopqrstuvwxyz|>
+---
+selects all occurrences of each selected text
+---
+envy:select-all-matches
+---
+<|a|>bc <|def|> <|a|>bc <|a|>bc
+ghi <|def|> ghi GHI jkl<|
+abcdefghijklmnopqrstuvwxyz|><|
+abcdefghijklmnopqrstuvwxyz|>
+---

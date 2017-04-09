@@ -1,0 +1,70 @@
+/* <||>Comment */
+class A {
+  b(c) {
+    d = "<||>abcdefg";
+    e = [1, <|2, 3|>, 4, 5];
+  }
+}
+---
+expands each selection to the nearest surrounding bracket pair
+---
+envy:select-surrounding-brackets
+---
+/*<| Comment |>*/
+class A {
+  b(c) {
+    d = "<|abcdefg|>";
+    e = [<|1, 2, 3, 4, 5|>];
+  }
+}
+---
+expands selections that completely cover the inside of a bracket pair to the outside of that pair
+---
+envy:select-surrounding-brackets
+---
+<|/* Comment */|>
+class A {
+  b(c) {
+    d = <|"abcdefg"|>;
+    e = <|[1, 2, 3, 4, 5]|>;
+  }
+}
+---
+merges selections that expand to the same surrounding bracket pair
+---
+envy:select-surrounding-brackets
+---
+<|/* Comment */|>
+class A {
+  b(c) {<|
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  |>}
+}
+---
+expands selections to nested bracket pairs
+---
+envy:select-surrounding-brackets
+envy:select-surrounding-brackets
+envy:select-surrounding-brackets
+---
+<|/* Comment */|>
+class A <|{
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+}|>
+---
+does nothing when there are no surrounding matched brackets
+---
+envy:select-surrounding-brackets
+---
+<|/* Comment */|>
+class A <|{
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+}|>
+---

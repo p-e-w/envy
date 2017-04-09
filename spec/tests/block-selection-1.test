@@ -1,0 +1,64 @@
+/*<|
+Comm|>ent
+*/
+
+class<||> A {
+
+  b(c) {
+<| |>   d = "<||>abcdefg";
+    e = [1, 2, 3, 4, 5];<||>
+  }
+
+}
+---
+expands multi-line selections to full lines and selections within words/non-words/whitespace to full tokens
+---
+envy:select-surrounding-block
+---
+<|/*
+Comment
+|>*/
+
+<|class|> A {
+
+  b(c) {
+<|    |>d = "<|abcdefg|>";
+    e = [1, 2, 3, 4, 5<|];|>
+  }
+
+}
+---
+expands full line selections to paragraphs and full token selections to full lines
+---
+envy:select-surrounding-block
+---
+<|/*
+Comment
+*/
+|>
+<|class A {
+|>
+  b(c) {
+<|    d = "abcdefg";
+|><|    e = [1, 2, 3, 4, 5];
+|>  }
+
+}
+---
+expands full line selections to paragraphs
+---
+envy:select-surrounding-block
+---
+<|/*
+Comment
+*/
+|>
+<|class A {
+|>
+<|  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+|>
+}
+---

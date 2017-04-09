@@ -1,36 +1,36 @@
 <|abcd|> efg<||> <|hijkl|> mnop
 qrs<| t|>uvwx <|yz.|>
-1<||>2<|3 4567|><|8|>90
+1<||>2<|3 4567|> <|8|>90
 ---
 left-aligns selections in columns by inserting spaces
 ---
 envy:left-align-selections
 ---
-   <|abcd|> efg<||>      <|hijkl|> mnop
+   <|abcd|> efg<||>       <|hijkl|> mnop
 qrs<| t|>uvwx  <|yz.|>
-1  <||>2       <|3 4567|><|8|>90
+1  <||>2       <|3 4567|> <|8|>90
 ---
 does nothing when the selections are already aligned
 ---
 envy:left-align-selections
 ---
-   <|abcd|> efg<||>      <|hijkl|> mnop
+   <|abcd|> efg<||>       <|hijkl|> mnop
 qrs<| t|>uvwx  <|yz.|>
-1  <||>2       <|3 4567|><|8|>90
+1  <||>2       <|3 4567|> <|8|>90
 ---
 right-aligns selections in columns by inserting spaces
 ---
 envy:right-align-selections
 ---
-   <|abcd|> efg          <||>      <|hijkl|> mnop
+   <|abcd|> efg          <||>       <|hijkl|> mnop
 qrs  <| t|>uvwx       <|yz.|>
-1      <||>2       <|3 4567|>          <|8|>90
+1      <||>2       <|3 4567|>           <|8|>90
 ---
 does nothing when the selections are already aligned
 ---
 envy:right-align-selections
 ---
-   <|abcd|> efg          <||>      <|hijkl|> mnop
+   <|abcd|> efg          <||>       <|hijkl|> mnop
 qrs  <| t|>uvwx       <|yz.|>
-1      <||>2       <|3 4567|>          <|8|>90
+1      <||>2       <|3 4567|>           <|8|>90
 ---

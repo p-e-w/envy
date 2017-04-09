@@ -1,0 +1,50 @@
+<|abc |><|def|> abc abc
+ghi def <|ghi |>GHI jkl<|
+a|>bcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+---
+moves each selection to the next occurrence of the selected text
+---
+envy:select-next-match
+---
+abc def <|abc |>abc
+ghi <|def|> <|ghi |>GHI jkl
+abcdefghijklmnopqrstuvwxyz<|
+a|>bcdefghijklmnopqrstuvwxyz
+---
+moves each selection to the previous occurrence of the selected text
+---
+envy:select-previous-match
+---
+<|abc |><|def|> abc abc
+<|ghi |>def ghi GHI jkl<|
+a|>bcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+---
+adds the next occurrence of the selected text to each selection
+---
+envy:add-select-next-match
+---
+<|abc |><|def|> <|abc |>abc
+<|ghi |><|def|> <|ghi |>GHI jkl<|
+a|>bcdefghijklmnopqrstuvwxyz<|
+a|>bcdefghijklmnopqrstuvwxyz
+---
+merges selections with identical text when moving them to the same position
+---
+envy:select-next-match
+---
+abc def <|abc |>abc
+ghi <|def|> <|ghi |>GHI jkl
+abc<|def|>ghijklmnopqrstuvwxyz<|
+a|>bcdefghijklmnopqrstuvwxyz
+---
+adds the previous occurrence of the selected text to each selection
+---
+envy:add-select-previous-match
+---
+<|abc |><|def|> <|abc |>abc
+<|ghi |><|def|> <|ghi |>GHI jkl<|
+a|>bc<|def|>ghijklmnopqrstuvwxyz<|
+a|>bcdefghijklmnopqrstuvwxyz
+---

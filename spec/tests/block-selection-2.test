@@ -1,0 +1,26 @@
+/* Comment */
+
+class <|A|> {
+
+  b(c) {
+    d = "abcdefg";
+    e = [1, 2, 3, 4, 5];
+  }
+
+}
+---
+selects all words
+---
+envy:select-all-blocks
+---
+/* <|Comment|> */
+
+<|class|> <|A|> {
+
+  <|b|>(<|c|>) {
+    <|d|> = "<|abcdefg|>";
+    <|e|> = [<|1|>, <|2|>, <|3|>, <|4|>, <|5|>];
+  }
+
+}
+---

@@ -1,0 +1,81 @@
+<|abcd|> efg hijkl mnop
+qrs tuvwx yz.
+123 4567890
+---
+copies and pastes a single selection
+---
+envy:copy-to-secondary-clipboard
+core:move-right
+envy:paste-from-secondary-clipboard
+---
+abcdabcd<||> efg hijkl mnop
+qrs tuvwx yz.
+123 4567890
+---
+cuts and pastes a single selection
+---
+editor:select-to-beginning-of-line
+envy:cut-to-secondary-clipboard
+editor:move-to-end-of-line
+envy:paste-from-secondary-clipboard
+---
+ efg hijkl mnopabcdabcd<||>
+qrs tuvwx yz.
+123 4567890
+---
+copies and pastes the entire line if the selection is empty
+---
+envy:copy-to-secondary-clipboard
+core:move-right
+envy:paste-from-secondary-clipboard
+---
+ efg hijkl mnopabcdabcd
+ efg hijkl mnopabcdabcd
+<||>qrs tuvwx yz.
+123 4567890
+---
+cuts and pastes the entire line if the selection is empty
+---
+envy:cut-to-secondary-clipboard
+core:move-up
+envy:paste-from-secondary-clipboard
+---
+ efg hijkl mnopabcdabcd
+qrs tuvwx yz.
+<||> efg hijkl mnopabcdabcd
+123 4567890
+---
+prepares the selections for the next test
+---
+envy:move-block-selection-forward-alternative
+envy:add-block-selection-forward
+envy:add-block-selection-forward
+---
+ efg hijkl mnopabcdabcd
+qrs tuvwx yz.
+ <|efg|> <|hijkl|> <|mnopabcdabcd|>
+123 4567890
+---
+pastes the corresponding clipboard item if the number of cursors equals the number of clipboard items
+---
+envy:copy-to-secondary-clipboard
+core:move-right
+envy:paste-from-secondary-clipboard
+---
+ efg hijkl mnopabcdabcd
+qrs tuvwx yz.
+ efgefg<||> hijklhijkl<||> mnopabcdabcdmnopabcdabcd<||>
+123 4567890
+---
+pastes each clipboard item on a separate line if the number of cursors does not equal the number of clipboard items
+---
+editor:move-to-end-of-line
+envy:paste-from-secondary-clipboard
+---
+ efg hijkl mnopabcdabcd
+qrs tuvwx yz.
+ efgefg hijklhijkl mnopabcdabcdmnopabcdabcdefg
+hijkl
+mnopabcdabcd<||>
+123 4567890
+---
