@@ -4,7 +4,7 @@
 
 Envy is an [Atom](https://github.com/atom/atom) :atom: package that provides a switchable mode in which letter keypresses are mapped to text editing operations.
 
-*[TODO: Add screencast here]*
+![Screencast](https://cloud.githubusercontent.com/assets/2702526/25304025/4a1e3a0e-274e-11e7-9504-3cf802405cbe.gif)
 
 This approach is shared with the [Vim](http://www.vim.org) family of editors, but only conceptually. Envy doesn't have any key bindings in common with Vim and augments, rather than modifies, the standard Atom editing experience. It simply wouldn't make sense to create yet another Vim clone or derivative – there are already so many. Instead, Envy is built from scratch to be an ergonomic modal editing system without any legacy baggage.
 
@@ -38,9 +38,11 @@ By contrast, **Envy's keymap is based on the _location of keys on the keyboard._
 
 **<kbd>Alt+J</kbd> enters Envy mode and <kbd>P</kbd> leaves it.** In Envy mode, this keymap applies:
 
-*[TODO: Add keyboard layout diagram here]*
+![Keymap](https://cloud.githubusercontent.com/assets/2702526/25304030/6ce2d1b2-274e-11e7-9e4e-a3910a8b6765.png)
 
-A full listing of all commands and their mapping follows. Note that the *Key* column shows the label of the letter key in the QWERTY keyboard layout, which may be different in another layout (but the physical position of the key is the same across all layouts).
+<small>*(Based on https://commons.wikimedia.org/wiki/File:KB_United_States.svg by Denelson83.)*</small>
+
+A detailed listing of all commands and their mapping follows. Note that the *Key* column shows the label of the letter key in the QWERTY keyboard layout, which may be different in another layout (but the physical position of the key is the same across all layouts).
 
 ### Cursor movement
 
