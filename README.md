@@ -1,6 +1,7 @@
 <h1 align="center">Envy</h1>
 <h3 align="center">Text editing supercharger</h3>
-<br>
+
+[![Build Status](https://travis-ci.org/p-e-w/envy.svg?branch=master)](https://travis-ci.org/p-e-w/envy)
 
 Envy is an [Atom](https://github.com/atom/atom) :atom: package that provides a switchable mode in which letter keypresses are mapped to text editing operations.
 
@@ -38,9 +39,13 @@ By contrast, **Envy's keymap is based on the _location of keys on the keyboard._
 
 **<kbd>Alt+J</kbd> enters Envy mode and <kbd>P</kbd> leaves it.** In Envy mode, this keymap applies:
 
+<br>
+
 ![Keymap](https://cloud.githubusercontent.com/assets/2702526/25304030/6ce2d1b2-274e-11e7-9e4e-a3910a8b6765.png)
 
 <small>*(Based on https://commons.wikimedia.org/wiki/File:KB_United_States.svg by Denelson83.)*</small>
+
+<br>
 
 A detailed listing of all commands and their mapping follows. Note that the *Key* column shows the label of the letter key in the QWERTY keyboard layout, which may be different in another layout (but the physical position of the key is the same across all layouts).
 
