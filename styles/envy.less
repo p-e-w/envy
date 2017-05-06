@@ -11,18 +11,18 @@
 
 @import 'syntax-variables';
 
-@background: darken(@syntax-background-color, 5%);
-@cursor: contrast(@background, orange, yellow);
+@envy-background: darken(@syntax-background-color, 5%);
+@envy-cursor: contrast(@envy-background, orange, yellow);
 
 atom-text-editor.envy-mode {
-  background-color: @background !important;
+  background-color: @envy-background !important;
 
   .selection .region {
-    background-color: @cursor !important;
+    background-color: @envy-cursor !important;
   }
 
   .cursor {
-    border-left: 3px solid @cursor !important;
+    border-left: 3px solid @envy-cursor !important;
   }
 
   .cursors.blink-off .cursor {

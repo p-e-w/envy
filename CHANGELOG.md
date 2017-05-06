@@ -1,3 +1,7 @@
+## v0.2.2 (2017-05-06)
+* Fix recursive definition if theme declares variable "@background" ([#8](https://github.com/p-e-w/envy/issues/8))
+
+
 ## v0.2.1 (2017-04-29)
 * Guard against bracket-matcher package being unavailable
 
