@@ -1,7 +1,7 @@
 {
   "name": "envy",
   "main": "./lib/main",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Text editing supercharger",
   "keywords": [
     "vim",
